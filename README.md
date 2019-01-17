@@ -8,6 +8,10 @@
 * `com.chc.rabbitmq_java_api.exchange.direct`: exchange的direct
 * `com.chc.rabbitmq_java_api.exchange.fanout` : exchange的fanou
 * `com.chc.rabbitmq_java_api.exchange.topic` : exchange的topic
-* `com.chc.rabbitmq_java_api.message`: massage的其他属性的使用
+* `com.chc.rabbitmq_java_api.message`: massage的其他属性的使用和消息过期
 * `com.chc.rabbitmq_java_api.confirm`: confirm的消息回送机制
 * `com.chc.rabbitmq_java_api.returnlistener`: return消息回送机制
+* `com.chc.rabbitmq_java_api.consumer`: 自定义消费者
+* `com.chc.rabbitmq_java_api.limit`: 消费端限流
+* `com.chc.rabbitmq_java_api.ack`: 消费端nack,ack和重回队列
+* `com.chc.rabbitmq_java_api.dlx`: 死信队列

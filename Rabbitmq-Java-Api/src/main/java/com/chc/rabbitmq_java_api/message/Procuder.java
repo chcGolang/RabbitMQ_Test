@@ -37,7 +37,7 @@ public class Procuder {
 				.deliveryMode(2)
 				// 编码
 				.contentEncoding("UTF-8")
-				// 超时时间
+				// 超时时间(毫秒)
 				.expiration("10000")
 				// 自定义属性
 				.headers(headers)
