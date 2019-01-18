@@ -1,6 +1,7 @@
 package com.chc.rabbitmq_spting.send;
 
 import com.chc.rabbitmq_spting.RabbitmqSptingApplicationTests;
+import model.Order;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,8 @@ public class RabbitSenderTest extends RabbitmqSptingApplicationTests {
     }
 
     @Test
-    public void sendOrder() {
+    public void sendOrder()throws Exception {
+        Order order = new Order("22","33name");
+        rabbitSender.sendOrder(order);
     }
 }

@@ -6,6 +6,8 @@
     <modules>
         <module>Rabbitmq-Java-Api</module>
         <module>common</module>
+        <module>rabbitmq-sptingboot-producer</module>
+        <module>rabbitmq-springboot-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

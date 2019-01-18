@@ -1,16 +1,16 @@
 package com.chc.rabbitmq_spting.send;
 
 
+import constant.queue_info.OrderQueueInfo;
 import model.Order;
 
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.amqp.support.converter.SimpleMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.MessageHeaders;
-import org.springframework.messaging.support.MessageBuilder;
+
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -51,15 +51,15 @@ public class RabbitSender {
 
     //发送消息方法调用: 构建Message消息
     public void send(Object message, Map<String, Object> properties) throws Exception {
-        /*MessageProperties messageProperties = new MessageProperties();
+        MessageProperties messageProperties = new MessageProperties();
         properties.keySet().forEach(key->{
             messageProperties.setHeader(key,properties.get(key));
         });
         SimpleMessageConverter converter = new SimpleMessageConverter();
-        final Message amqpMsg = converter.toMessage(message, messageProperties);*/
+        final Message amqpMsg = converter.toMessage(message, messageProperties);
 
-        MessageHeaders mhs = new MessageHeaders(properties);
-        Message amqpMsg = MessageBuilder.createMessage(message, mhs);
+        /*MessageHeaders mhs = new MessageHeaders(properties);
+        Message amqpMsg = MessageBuilder.createMessage(message, mhs);*/
 
         rabbitTemplate.setConfirmCallback(confirmCallback);
         rabbitTemplate.setReturnCallback(returnCallback);
@@ -75,6 +75,6 @@ public class RabbitSender {
         rabbitTemplate.setReturnCallback(returnCallback);
         //id + 时间戳 全局唯一
         CorrelationData correlationData = new CorrelationData("0987654321");
-        rabbitTemplate.convertAndSend("exchange-2", "springboot.def", order, correlationData);
+        rabbitTemplate.convertAndSend(OrderQueueInfo.EXCHANGE_VALUE, OrderQueueInfo.PRODUCT_QUEUE_VALUE, order, correlationData);
     }
 }
