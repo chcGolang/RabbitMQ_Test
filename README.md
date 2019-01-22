@@ -15,3 +15,15 @@
 * `com.chc.rabbitmq_java_api.limit`: 消费端限流
 * `com.chc.rabbitmq_java_api.ack`: 消费端nack,ack和重回队列
 * `com.chc.rabbitmq_java_api.dlx`: 死信队列
+
+## rabbitmq-springboot-consumer
+* springboot与rabbitmq整合的接收端
+
+## rabbitmq-sptingboot-producer
+* springboot与rabbitmq整合的发送端
+
+## Rabbitmq-springcloudstream-consumer
+* spring cloud stream 的接收端
+
+## Rabbitmq-springcloudstream-producer
+* spring cloud stream 的发送端
