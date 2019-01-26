@@ -16,6 +16,7 @@
 * `com.chc.rabbitmq_java_api.ack`: 消费端nack,ack和重回队列
 * `com.chc.rabbitmq_java_api.dlx`: 死信队列
 * `com.chc.rabbitmq_java_api.delayed`: 延迟队列(安装rabbitmq_delayed_message_exchange插件)
+* `com.chc.rabbitmq_java_api.affair` 事务消息(并发高的情况下不推荐使用)
 
 ## rabbitmq-springboot-consumer
 * springboot与rabbitmq整合的接收端
