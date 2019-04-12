@@ -11,7 +11,7 @@ public interface OrderQueueInfo {
     String EXCHANGE_TYPE="topic";
     String QUEUE_VALUE="spring_order";
     String QUEUE_DURABLE="true";
-    String KEY="spring_order.*";
+    String KEY="spring_order.test";
 
     String PRODUCT_QUEUE_VALUE="spring_order.test";
 }

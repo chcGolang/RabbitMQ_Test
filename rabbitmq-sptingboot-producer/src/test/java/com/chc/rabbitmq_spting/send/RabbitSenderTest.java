@@ -3,6 +3,8 @@ package com.chc.rabbitmq_spting.send;
 import com.chc.rabbitmq_spting.RabbitmqSptingApplicationTests;
 import model.Order;
 import org.junit.Test;
+import org.springframework.amqp.core.MessageBuilder;
+import org.springframework.amqp.core.MessageProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
