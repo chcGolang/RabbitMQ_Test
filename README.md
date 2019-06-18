@@ -34,6 +34,3 @@
 * 插件搜索地址:`http://www.rabbitmq.com/community-plugins.html`
 1. 延迟队列插件
 延迟插件名称:rabbitmq_delayed_message_exchange
-
-* [Rabbitmq知识总结](http://note.youdao.com/noteshare?id=eb69236328be13d0638bd4ae942e3631&sub=B84455DB6BCB46A4A44465EEA07E2B28)
-* [RabbitMQ集群部署](http://note.youdao.com/noteshare?id=3c65b984ec77468b4b08e58c82e5cb38&sub=707A70491B854EBABEE0855CC18D85E4)
